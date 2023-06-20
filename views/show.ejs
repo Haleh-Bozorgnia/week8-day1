@@ -13,11 +13,9 @@
     <ul>
             <li>TYPE-ONE:<%= pokemon.type[0] %></li>
             <li>TYPE-TWO:<%= pokemon.type[1] %></li>
-        </ul>
-       <ul>
-            <li>HP:<%= pokemons[i].stats.hp %> </li>
-            <li>ATTACK:<%= pokemons[i].stats.attack %></li>
-            <li>DEFENSE:<%= pokemons[i].stats.defense %></li>
+            <li>HP:<%= pokemon.stats.hp %> </li>
+            <li>ATTACK:<%= pokemon.stats.attack %></li>
+            <li>DEFENSE:<%= pokemon.stats.defense %></li> 
         </ul>
     <a href="/pokemon/<%= id %>/edit"><button>Edit</button></a>
     <form action="/pokemon/<%= id %>?_method=DELETE" method="POST">
