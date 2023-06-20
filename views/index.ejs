@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokemons</title>
+    <%- include("imports.ejs") %>
+</head>
+<body>
+    <h1>The pokemons App</h1>
+
+    <a href="/pokemon/new"><button>Create New pokemon</button></a>
+    
+    <ul>
+        <% for(let i = 0; i < pokemons.length; i++){ %>
+
+            <li><a href="/pokemon/<%= i %>"><%= pokemons[i].name %></a>
+                    <img src="<%= pokemons[i].img %>">
+                    <ul>
+            <li>TYPE-ONE:<%= pokemons[i].type[0] %></li>
+            <li>TYPE-TWO:<%= pokemons[i].type[1] %></li>
+        </ul>
+            </li>
+        <ul>
+            <li>HP:<%= pokemons[i].stats.hp %> </li>
+            <li>ATTACK:<%= pokemons[i].stats.attack %></li>
+            <li>DEFENSE<%= pokemons[i].stats.defense %></li>
+        </ul>
+        <% } %>
+    </ul>
+    
+</body>
+</html>
