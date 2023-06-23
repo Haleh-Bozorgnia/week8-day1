@@ -1,7 +1,8 @@
 h1 {
     background-color: brown;
-    color: white;
+    color:#000;
     padding: 5px;
+    margin-top: 10px;
 }
 
 li {
@@ -15,4 +16,46 @@ li {
 
 .green {
     color: green;
+}
+.showAll{
+    display: flex;
+    background-color: hwb(60 71% 1%);
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.showAll-img{
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 5px;
+    /* background-color: brown; */
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.6);
+    border:solid 5px rgb(163, 73, 73);
+}
+ul{
+list-style-type: none;}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(175, 21, 21);
+    border-radius: 10px;
+
+}
+.btn-new{
+    margin: 45px;
+    padding: 5px; 
+    height: 50px;
+    width: 310px; 
+    background-color: rgb(240, 180, 102);
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    border-color: burlywood;
+    cursor: pointer;
+}
+.all-pokemon{
+    background-color: rgb(71, 66, 66);
 }

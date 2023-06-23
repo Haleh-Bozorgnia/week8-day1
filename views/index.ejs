@@ -7,28 +7,20 @@
     <title>pokemons</title>
     <%- include("imports.ejs") %>
 </head>
-<body>
-    <h1>The pokemons App</h1>
+<body class="all-pokemon">
+    <header>
+            <h1>POKEDEX</h1>
+            <a href="/pokemon/new"><button class="btn-new">Create New pokemon</button></a>
 
-    <a href="/pokemon/new"><button>Create New pokemon</button></a>
-    
-    <ul>
+    </header>
+
+    <ul class="showAll">
         <% for(let i = 0; i < pokemons.length; i++){ %>
 
-            <li><a href="/pokemon/<%= i %>"><%= pokemons[i].name %></a>
-                    <img src="<%= pokemons[i].img %>">
-                    <ul>
-            <li>TYPE-ONE:<%= pokemons[i].type[0] %></li>
-            <li>TYPE-TWO:<%= pokemons[i].type[1] %></li>
-        </ul>
+            <li>
+              <a href="/pokemon/<%= i%>"><img class="showAll-img" src="<%= pokemons[i].img %>"/></li></a>
             </li>
-        <ul>
-            <li>HP:<%= pokemons[i].stats.hp %> </li>
-            <li>ATTACK:<%= pokemons[i].stats.attack %></li>
-            <li>DEFENSE<%= pokemons[i].stats.defense %></li>
-        </ul>
         <% } %>
     </ul>
-    
 </body>
 </html>

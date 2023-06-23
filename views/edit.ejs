@@ -14,15 +14,11 @@
     <form action="/pokemon/<%= id %>?_method=PUT" method="post">
         <input type="text" name="name" placeholder="name of pokemon" value="<%= pokemon.name %>"/>
         <img src="<%= pokemon.img %>">
-        <ul>
-            <li>TYPE-One:<%= pokemon.type[0] %></li>
-            <li>TYPE-TWO<%= pokemon.type[1] %></li>
-        </ul>
-        <ul>
-            <li>HP:<%= pokemon.stats.hp %> </li>
-            <li>ATTACK:<%= pokemon.stats.attack %></li>
-            <li>DEFENSE:<%= pokemon.stats.defense %></li>
-        </ul>
+        <input type="text" name="TYPE-ONE" placeholder="type-one" value="<%= pokemon.type[0]%>/>
+        <input type="text" name="TYPE-two" placeholder="type-one"/>
+        <input type="text" name="HP" placeholder="hp"/>
+        <input type="text" name="ATTACK" placeholder="attack"/>
+        <input type="text" name="DEFENSE" placeholder="defense"/>
         <!-- <input type="text" name="color" placeholder="color of fruit" value="
             ========="/>
         <input type="checkbox" name="readyToEat" 
