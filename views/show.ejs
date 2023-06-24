@@ -7,20 +7,40 @@
     <title><%= pokemon.name %></title>
     <%- include("imports.ejs") %>
   </head>
-  <body>
-    <h1>name: <%= pokemon.name %></h1>
-    <img src="<%= pokemon.img %>">
-    <ul>
-            <li>TYPE-ONE:<%= pokemon.type[0] %></li>
-            <li>TYPE-TWO:<%= pokemon.type[1] %></li>
-            <li>HP:<%= pokemon.stats.hp %> </li>
-            <li>ATTACK:<%= pokemon.stats.attack %></li>
-            <li>DEFENSE:<%= pokemon.stats.defense %></li> 
-        </ul>
-    <a href="/pokemon/<%= id %>/edit"><button>Edit</button></a>
-    <form action="/pokemon/<%= id %>?_method=DELETE" method="POST">
-      <input type="submit" value="DELETE"/>
-    </form>
-    <h3><a href="/pokemon">GO BACK TO LIST OF FRUITS</a></h3>
+  <body class="show-item">
+    <header>
+          <h1>Name: <%= pokemon.name %></h1>
+            <button><a href="/pokemon">GO BACK TO LIST OF FRUITS</a></button>
+    </header>
+    <div class="poke-body">
+        <div class="poke-info">
+          <h2>ID:<%= pokemon.id %></h2>
+          <h2>Name: <%= pokemon.name %></h2>
+          <img class="poke-img-show" src="<%= pokemon.img %>">
+        </div>
+        <div class="poke-type">
+          <ul> <p>Type</p>
+              <% for(i=0; i<pokemon.type.length;i++){%>
+              <li><%= pokemon.type[i] %></li>
+              <% } %>           
+          </ul>
+        </div>
+        <div class="poke-stats">
+          <ul>
+            <p>Stats</p>
+            <li><h4>HP: <%= pokemon.stats.hp %></h4> </li>
+            <li><h4>ATTACK: <%= pokemon.stats.attack %></h4></li>
+            <li><h4>DEFENSE: <%= pokemon.stats.defense %></h4></li> 
+          </ul>
+        </div>
+    </div>
+    <div class="poke-transaction">
+      <a href="/pokemon/<%= id %>/edit"><button>EDIT</button></a>
+      <form action="/pokemon/<%= id %>?_method=DELETE" method="POST">
+      <input class="btn-delete" type="submit" value="DELETE"/>
+       </form>
+    </div>
+
+    
   </body>
 </html>
