@@ -14,9 +14,7 @@ li {
     color: red;
 }
 
-.green {
-    color: green;
-}
+
 .showAll{
     display: flex;
     background-color: hwb(60 71% 1%);
@@ -43,7 +41,7 @@ header{
     border-radius: 10px;
 
 }
-button, .btn-delete{
+button, .btn-delete, .btn-poke-edit{
     margin: 45px;
     padding: 5px; 
     height: 50px;
@@ -91,4 +89,40 @@ a{
 }
 p{
     font-size: 25px;
+}
+
+.poke-body-edit, .poke-info-edit{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    background-color:rgb(255, 255, 192);
+    align-items: center;
+    margin:20px;
+
+}
+.poke-body-edit input{
+height: 50px;
+width: 450px;
+padding: 20px;
+margin: 20px;
+background-color: rgb(71, 66, 66);
+color: #fff;
+font-size: 20px;
+border-radius: 10px;
+}
+/* .poke-info-edit img{
+    margin-top: 20px;
+    padding-top: 50px;
+} */
+
+.poke-img-edit{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 5px;
+    /* background-color: brown; */
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.6);
+    border:solid 5px rgb(163, 73, 73);
+
 }
