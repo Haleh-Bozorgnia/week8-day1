@@ -16,10 +16,12 @@
 
     <ul class="showAll">
         <% for(let i = 0; i < pokemons.length; i++){ %>
-
             <li>
-              <a href="/pokemon/<%= i%>"><img class="poke-img" src="<%= pokemons[i].img %>"/></li></a>
+              <a href="/pokemon/<%= i%>"><img class="poke-img" src="<%= pokemons[i].img %>"/></a>
+              <h2><%= pokemons[i].name %></h2>
             </li>
+            
+          
         <% } %>
     </ul>
 </body>

@@ -8,28 +8,25 @@
     <%- include("imports.ejs") %>
 </head>
 <body>
-    <h1>The Pokemons App</h1>
+    <h1>The Pokemons Information</h1>
     
     <h2>Edit <%= pokemon.name %></h2>
     <form action="/pokemon/<%= id %>?_method=PUT" method="post">
         <div class="poke-body-edit">
             <div class="poke-info-edit">
-                <img class="poke-img-edit" src="<%= pokemon.img %>">
+                <!-- <img class="poke-img-edit" src="<%= pokemon.img %>"> -->
+
                 <input class="btn-poke-edit" type="submit" value="Edit <%= pokemon.name %>"/>
             </div>
             <div class="poke-body-edit">
-                <input type="text" name="name" placeholder="name of pokemon" value="<%= pokemon.name %>"/>
-                <input type="text" name="TYPE-ONE" placeholder="type-one" value="<%= pokemon.type[0]%>"/>
-                <input type="text" name="TYPE-two" placeholder="type-one"/>
-                <input type="text" name="HP" placeholder="hp"/>
-                <input type="text" name="ATTACK" placeholder="attack"/>
-                <input type="text" name="DEFENSE" placeholder="defense"/>
+                <input type="text" name="name" value="<%= pokemon.name %>"/>
+                <input type="text" name="image"value="<%= pokemon.img %>"/>
+                <input type="text" name="type" value="<%= pokemon.type%>"/>
+                <input type="text" name="attack" value=<%= pokemon.stats.attack %>/>
+                <input type="text" name="hp" value=<%= pokemon.stats.hp %>/>
+                <input type="text" name="defense" value=<%= pokemon.stats.defense %>/>
             </div>
 
-            <!-- <input type="text" name="color" placeholder="color of fruit" value="
-                ========="/>
-            <input type="checkbox" name="readyToEat" 
-            /> -->
         </div>
     </form>
     

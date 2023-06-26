@@ -37,7 +37,18 @@ router.put("/:id", (req, res) => {
     const id = req.params.id
     
     // swap the current version with the new version in the array
-    pokemons[id] = req.body;
+    pokemons[id] = {
+      name: req.body.name,
+      img : req.body.image,
+      type: [
+          req.body.type
+      ],
+      stats:{
+        hp: req.body.hp,
+        attack : req.body.attack,
+        defense : req.body.defense
+      }
+    }
     // redirect the user back to the index page
     res.redirect("/pokemon");
   })
@@ -48,6 +59,17 @@ router.post("/", (req, res) => {
   // PUSH THE NEW POKEMON INTO THE ARRAY
   pokemons.push(req.body);
   // SEND USER BACK TO THE INDEX PAGE
+  let newPokemon = {
+    name: req.body.name,
+    img: req.body.image,
+    type: [req.body.type],
+    stats: {
+      hp: req.body.hp,
+      attack: req.body.attack,
+      defense: req.body.defense,
+    },
+  }
+  pokemons.push(newPokemon)
   res.redirect("/pokemon"); 
 })
   

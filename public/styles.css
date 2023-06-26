@@ -21,6 +21,13 @@ li {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.showAll h2{
+    border-radius: 10px;
+    height: 15px;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+}
 .poke-img,.poke-img-show{
     height: 150px;
     width: 150px;
