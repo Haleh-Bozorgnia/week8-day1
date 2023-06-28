@@ -57,7 +57,7 @@ router.put("/:id", (req, res) => {
 router.post("/", (req, res) => {
 
   // PUSH THE NEW POKEMON INTO THE ARRAY
-  pokemons.push(req.body);
+  // pokemons.push(req.body);
   // SEND USER BACK TO THE INDEX PAGE
   let newPokemon = {
     name: req.body.name,
